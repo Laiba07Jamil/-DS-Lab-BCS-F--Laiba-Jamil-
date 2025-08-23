@@ -60,7 +60,8 @@ int main(){
     return 0;
 }
 
-/*If custom copy constructor and copy asignment operator will not be created then defualt copy consturcotr would be
-initiated that reults in shallow copy.
+/*Without a custom copy constructor and copy asignment operator default copy consturcotr would be initiated that reults in shallow copy.Which can lead to 
 1.If b1 is changed it also affect b2 and b3 .
-2.All objects (b1, b2, b3) will point to the same int.*/
+2.All objects (b1, b2, b3) will point to the same int.
+3.double-deletion or data corruption.*/
+
