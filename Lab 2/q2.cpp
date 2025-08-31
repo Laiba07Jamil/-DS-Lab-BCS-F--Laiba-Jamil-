@@ -2,16 +2,16 @@
 using namespace std;
 
 int main(){
-    int **arr ;
+    int **seating ;
     int rows ,columns;
     cout << "Enter the size of rows: " ;
     cin >> rows;
     cout << "Enter the size of columns: " ;
     cin >> columns ;
     
-    arr = new int* [rows];
+    seating = new int* [rows];
     for(int i = 0 ; i < rows ; i++){
-        arr[i] = new int[columns];
+        seating[i] = new int[columns];
     }
     
     for(int i = 0 ; i < rows ; i++){
@@ -33,7 +33,7 @@ int main(){
     
     for(int i = 0 ; i < rows ; i++){
         for(int j = 0 ; j < columns ; j++){
-            cout  << arr[i][j] << " " ;
+            cout  << seating[i][j] << " " ;
         }
         cout << endl;
     }
@@ -42,9 +42,9 @@ int main(){
     
     
     for(int i = 0 ; i < rows ; i++){
-        delete[] arr[i];
+        delete[] seating[i];
     }
-    delete[] arr;
+    delete[] seating;
     
     return 0 ;
 }
