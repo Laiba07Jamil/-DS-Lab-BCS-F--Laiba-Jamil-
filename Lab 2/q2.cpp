@@ -3,25 +3,25 @@ using namespace std;
 
 int main(){
     int **seating ;
-    int rows ,columns;
+    int benches ,seat;
     cout << "Enter the size of rows: " ;
-    cin >> rows;
+    cin >> benches;
     cout << "Enter the size of columns: " ;
-    cin >> columns ;
+    cin >> seat ;
     
-    seating = new int* [rows];
-    for(int i = 0 ; i < rows ; i++){
-        seating[i] = new int[columns];
+    seating = new int* [benches];
+    for(int i = 0 ; i < benches ; i++){
+        seating[i] = new int[seat];
     }
     
-    for(int i = 0 ; i < rows ; i++){
-        for(int j = 0 ; j < columns ; j++){
+    for(int i = 0 ; i < benches ; i++){
+        for(int j = 0 ; j < seat ; j++){
             while(true){
                 int value;
                 cout << "Enter the value for [" << i +1 << "] [" << j +1 << "] :";
                 cin >> value;
                 if(value == 1 || value == 0){
-                     arr[i][j] = value;
+                     seating[i][j] = value;
                    break;
                 }
                 else{
@@ -31,17 +31,14 @@ int main(){
         }
     }
     
-    for(int i = 0 ; i < rows ; i++){
-        for(int j = 0 ; j < columns ; j++){
+    for(int i = 0 ; i < benches ; i++){
+        for(int j = 0 ; j < seat ; j++){
             cout  << seating[i][j] << " " ;
         }
         cout << endl;
     }
     
-    
-    
-    
-    for(int i = 0 ; i < rows ; i++){
+    for(int i = 0 ; i < benches ; i++){
         delete[] seating[i];
     }
     delete[] seating;
