@@ -33,6 +33,6 @@ int main(){
     cin >> target;
     
     Linearsearch(arr , target , n);
-    delete arr;
+    delete[] arr;
     return 0;
  }
