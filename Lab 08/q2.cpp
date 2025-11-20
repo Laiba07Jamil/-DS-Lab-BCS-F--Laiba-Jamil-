@@ -136,13 +136,6 @@ class BST{
     }
     BST() : root(nullptr){}
 
-    Node* find(Node* root, const string& name){
-    if(!root) return nullptr;
-    if(name == root->data.getname()) return root;
-    if(name < root->data.getname()) return find(root->left, name);
-    else return find(root->right, name);
-}
-
 
 };
 
@@ -227,4 +220,5 @@ int main(){
     GameFlow(player,Enemies);
     return 0;
 }
+
 
