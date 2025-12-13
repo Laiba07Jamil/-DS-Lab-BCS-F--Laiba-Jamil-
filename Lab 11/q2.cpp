@@ -71,7 +71,7 @@ class HashTable{
             return ;
         }
 
-        while(temp != NULL & temp->key != key){
+        while(temp != NULL && temp->key != key){
             prev = temp;
             temp = temp->next;
         }
@@ -128,3 +128,4 @@ int main(){
 
 
 }
+
